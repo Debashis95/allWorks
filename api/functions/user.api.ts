@@ -45,3 +45,10 @@ export const ProfileUpdateMutation = async (body: IFormInput) => {
     return error;
   }
 };
+
+export const GetUserDetails = async (slug: string) => {
+  const res = await axiosInstance.get<IgetSignUpQuery>(
+    endpoints.auth
+  );
+  return res;
+};
